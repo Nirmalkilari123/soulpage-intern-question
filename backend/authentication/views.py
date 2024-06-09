@@ -4,8 +4,14 @@ from django.http import JsonResponse
 from django.middleware.csrf import get_token
 from rest_framework import status
 from rest_framework.decorators import api_view
-
+from .models import Conversation
 from authentication.models import CustomUser
+
+
+def generate_summary(conversation):
+    # Placeholder summary generation logic
+    conversation.summary = f"Summary of conversation with {conversation.participants.count()} participants."
+    conversation.save()
 
 
 @api_view(["GET"])

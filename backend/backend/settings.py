@@ -149,3 +149,14 @@ CSRF_TRUSTED_ORIGINS = [
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = "None"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql',
+        'USER': 'Nirmalkilari',
+        'PASSWORD': 'knkccbp@A1',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
